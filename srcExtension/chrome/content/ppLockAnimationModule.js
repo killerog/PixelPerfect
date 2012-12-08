@@ -16,11 +16,11 @@ function(FBL, FBTrace) {
 Firebug.PPLockAnimationModule = FBL.extend(Firebug.Module,
 {
     
-    this.frame = 0;
-    this.directionForward = true;
-    this.animationSpeed = 10;
-    this.spriteSpacing = 170;
-    this.refreshId = null;
+    frame : 0,
+    directionForward : true,
+    animationSpeed : 10,
+    spriteSpacing : 170,
+    refreshId : null,
 
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
     // Initialization
@@ -73,7 +73,7 @@ Firebug.PPLockAnimationModule = FBL.extend(Firebug.Module,
                 this.frame--;
             }
         }
-    }
+    },
 });
 
 // ********************************************************************************************* //
