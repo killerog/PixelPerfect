@@ -6,7 +6,7 @@ FBL.ns(function() {
             initialize: function() {
                 this.initPrefs();
                 this.addEventListeners();
-                pixelPerfect.utils.toggleStatusBar(Firebug.getPref(Firebug.prefDomain, "pixelPerfect.hidestatusbar"));
+                //pixelPerfect.utils.toggleStatusBar(Firebug.getPref(Firebug.prefDomain, "pixelPerfect.hidestatusbar"));
             },
 
             initPrefs: function() {
@@ -46,9 +46,9 @@ FBL.ns(function() {
 
             // When an option changes, this is called.
             updateOption: function(name, value) {
-                if ("pixelPerfect.hidestatusbar" == name) {
+                /*if ("pixelPerfect.hidestatusbar" == name) {
                     pixelPerfect.utils.toggleStatusBar(value);
-                }
+                }*/
             },
 
             shutdown: function()
@@ -61,7 +61,7 @@ FBL.ns(function() {
             showPanel: function(browser, panel)
             {
                 var isPixelPerfectExtension = panel && panel.name == "pixelPerfect";
-                var PixelPerfectExtensionButtons = browser.chrome.$("fbPixelPerfectPanelButtons");
+                var PixelPerfectExtensionButtons = Firebug.chrome.$("fbPixelPerfectPanelButtons");
                 if (Firebug.getPref(Firebug.prefDomain, "pixelPerfect.hidewhenfocuslost")) {
                     pixelPerfect.utils.setVisibilityForOverlay(isPixelPerfectExtension);
                 }

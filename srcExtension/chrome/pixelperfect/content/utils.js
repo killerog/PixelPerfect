@@ -27,10 +27,10 @@ pixelPerfect.utils = function () {
                     return newFileName;
                 }
             },
-            
-            toggleStatusBar: function(bHide) {
-            	FirebugChrome.window.document.getElementById('ppStatusBar').hidden = bHide;
-            },
+            // Should use the add-on bar in the future if I have time to figure that one out :)
+            /*toggleStatusBar: function(bHide) {
+            	Firefox.getElementById('ppStatusBar').hidden = bHide;
+            },*/
             
             loadCss: function(url, doc) {
                 if ( ! doc ) {
